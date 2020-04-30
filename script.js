@@ -30,6 +30,7 @@ let auteur = document.querySelector('#auteur');
 let button = document.querySelector('#nouveau');
 let dernier = 0;
 let nombreAleatoire = 0;
+let max = citations.length;
 
 //générer un nombre entier
 function genereNombreEntier(max) {
@@ -38,8 +39,8 @@ function genereNombreEntier(max) {
 
 button.addEventListener('click', () => {
     do {
-        nombreAleatoire = genereNombreEntier(20);
-;    } while (nombreAleatoire === dernier);
+        nombreAleatoire = genereNombreEntier(max);
+    } while (nombreAleatoire === dernier);
 
     if(nombreAleatoire !== dernier) {
         dernier = nombreAleatoire
